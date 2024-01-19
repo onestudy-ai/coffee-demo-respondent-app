@@ -56,12 +56,14 @@ export default function LandingPage(props: LandingPageProps) {
 
 	return (
 		<>
-			<div className="relative isolate overflow-hidden bg-white dark:bg-stone-950 min-h-screen flex-col items-center justify-between">
+			<div 
+				className="relative isolate overflow-hidden bg-white dark:bg-stone-950 min-h-screen flex-col items-center justify-between"
+				style={{
+					backgroundColor: props.headerBgColor || mainColor
+				}}
+			>
 				<div
 					className={`w-full h-32 lg:h-64`}
-					style={{
-						backgroundColor: props.headerBgColor || mainColor
-					}}
 				>
 					<div className={`w-full h-32 lg:h-64 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-gray-500 via-gray-800 to-black opacity-30`} />
 				</div>
@@ -70,7 +72,7 @@ export default function LandingPage(props: LandingPageProps) {
 					<ModeToggle />
 				</div>
 
-				<div className="relative w-5/6 lg:w-2/5 mx-auto pb-24 pt-10 lg:flex px-8 -mt-12 lg:-mt-32 bg-white dark:bg-black rounded-2xl shadow-lg z-10">
+				<div className="relative w-full mx-auto pb-24 pt-10 lg:flex px-8 -mt-12 lg:-mt-32 bg-white dark:bg-black rounded-2xl shadow-lg z-10">
 					<div
 						className={'flex w-full flex-1 flex-col items-center space-y-10'}
 					>

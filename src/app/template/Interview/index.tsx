@@ -12,13 +12,6 @@ export const InterviewWrapper = (props: InterviewProps) => {
 			{/* Header */}
 			<div className="w-full flex justify-between items-center px-3 py-5">
 				<div className="flex items-center">
-					{props.interview?.study?.meta?.imageUrl ? (
-						<img
-							src={props.interview?.study?.meta?.imageUrl}
-							className={'w-20 h-20 object-contain rounded-lg dark:bg-white p-1'}
-						/>
-					) : null}
-
 					<div className="font-bold text-sm px-3 ml-3 text-center">
 						<span>{props.interview?.study?.meta?.shareTitle || "We need your feedback!"}</span>
 					</div>
@@ -30,6 +23,17 @@ export const InterviewWrapper = (props: InterviewProps) => {
 			</div>
 
 			{/* Conversation */}
+			<div
+				className={'flex w-full flex-1 flex-col items-center space-y-10'}
+			>
+				{props.interview?.study?.meta?.imageUrl ? (
+					<img
+						src={props.interview?.study?.meta?.imageUrl}
+						className={'w-32 h-32 object-contain rounded-lg dark:bg-white p-3'}
+						alt=""
+					/>
+				) : null}
+			</div>
 			<div className="mx-auto px-2 pb-24 pt-5 lg:pt-20 sm:pb-32 lg:flex lg:px-8">
 				<div className="flex w-full flex-1 flex-col items-center">
 					<ConversationWrapper interview={props.interview} />
