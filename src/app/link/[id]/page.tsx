@@ -16,7 +16,7 @@ export async function generateMetadata(
   const data = await getStudyById(params.id);
 
   return {
-    metadataBase: new URL('https://interview.onestudy.ai/'),
+    metadataBase: new URL('https://coffee-demo-respondent-app.vercel.app/'),
     title: data?.metaData?.shareTitle || "We need your feedback!",
     description: data?.metaData?.shareDescription || "",
     openGraph: {

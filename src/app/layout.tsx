@@ -16,7 +16,7 @@ const mainFont = MainFont({
 export const metadata: Metadata = {
 	title: 'One Study Interviews.',
 	description: '',
-	metadataBase: new URL('https://interview.onestudy.ai/'),
+	metadataBase: new URL('https://coffee-demo-respondent-app.vercel.app/'),
 }
 
 export default function RootLayout({
