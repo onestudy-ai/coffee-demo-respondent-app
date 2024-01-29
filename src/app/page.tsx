@@ -7,6 +7,7 @@ export async function generateMetadata(): Promise<Metadata> {
 	return {
 		title: "Coffee Research",
 		description: "This is a research site for coffee!",
+		metadataBase: new URL('https://coffee-demo-respondent-app.vercel.app/'),
 	}
 }
 
